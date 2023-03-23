@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CamionModel extends Model
 {
+    public $table='camiones';
+    use HasFactory;
     public function transporte()
     {
         return $this->belongsTo('App\Models\TransporteModel');

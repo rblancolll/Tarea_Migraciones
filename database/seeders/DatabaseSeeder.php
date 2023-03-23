@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\TransporteModel;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +13,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        $this->call(CamionSeeder::class);
+        $transportes=new TransporteModel();
+        $transportes->id = '123455';
+        $transportes->nombre = 'rar';
+        $transportes->razon_social = 'pull';
+        $transportes->save();
     }
 }
+
+
+
+
+
+
+
+
